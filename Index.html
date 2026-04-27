@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome link -->
+
+    <link rel="stylesheet" href="Asset/Styling/Style.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container header-wrapper">
+
+            <!-- LOGO -->
+            <div class="logo"> <i class="fa-solid fa-bag-shopping"></i> Brand</div>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input type="text" placeholder="Search">
+
+                <div class="dropdown">
+                    <button class="dropbtn" id="categoryBtn">All category ⌄</button>
+
+                    <div class="dropdown-content">
+                        <p onclick="setCategory('Automobiles')">Automobiles</p>
+                        <p onclick="setCategory('Clothes')">Clothes and wear</p>
+                        <p onclick="setCategory('Home')">Home interiors</p>
+                        <p onclick="setCategory('Tech')">Computer and tech</p>
+                        <p onclick="setCategory('Tools')">Tools, equipments</p>
+                        <p onclick="setCategory('Sports')">Sports and outdoor</p>
+                        <p onclick="setCategory('Pets')">Animal and pets</p>
+                    </div>
+                </div>
+
+                <button class="search-btn">Search</button>
+
+            </div>
+            <!-- ACTIONS -->
+            <div class="actions">
+                <div class="action-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="action-item">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Message</span>
+                </div>
+                <div class="action-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="action-item">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <span>My cart</span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- Navbar -->
+
+
+    <!-- Secondary Navbar -->
+    <div class="navbar">
+        <div class="container nav-wrapper">
+
+            <!-- LEFT -->
+            <div class="nav-left">
+                <span class="menu">☰ All category</span>
+                <span>Hot offers</span>
+                <span>Gift boxes</span>
+                <span>Projects</span>
+                <span>Menu item</span>
+                <span>Help</span>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+
+                <!-- LANGUAGE + CURRENCY -->
+                <div class="dropdown">
+                    <button class="dropbtn" id="currencyBtn">English, USD ⌄</button>
+                    <div class="dropdown-content">
+                        <p onclick="setCurrency('USD', 'English, USD')">USD ($)</p>
+                        <p onclick="setCurrency('PKR', 'Urdu, PKR')">PKR (₨)</p>
+                        <p onclick="setCurrency('EUR', 'English, EUR')">EUR (€)</p>
+                    </div>
+                </div>
+
+                <!-- COUNTRY -->
+                <div class="dropdown">
+                    <button class="dropbtn" id="countryBtn">Ship to 🌍 ⌄</button>
+                    <div class="dropdown-content">
+                        <p onclick="setCountry('USA 🇺🇸')">USA 🇺🇸</p>
+                        <p onclick="setCountry('Pakistan 🇵🇰')">Pakistan 🇵🇰</p>
+                        <p onclick="setCountry('Germany 🇩🇪')">Germany 🇩🇪</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary Navbar -->
+
+
+</body>
+
+<script>
+
+    function setCategory(cat) {
+        document.getElementById("categoryBtn").innerText = cat + " ⌄";
+    }
+
+
+
+
+    let currentCurrency = "USD";
+
+    function setCurrency(code, text) {
+        currentCurrency = code;
+
+        // button text update
+        document.getElementById("currencyBtn").innerText = text + " ⌄";
+
+        updatePrices();
+    }
+
+    function setCountry(country) {
+        document.getElementById("countryBtn").innerText = country + " ⌄";
+    }
+
+    /* Price system */
+    const rates = {
+        USD: 1,
+        PKR: 278,
+        EUR: 0.92
+    };
+
+    const symbols = {
+        USD: "$",
+        PKR: "₨",
+        EUR: "€"
+    };
+
+    function updatePrices() {
+        let prices = document.querySelectorAll(".price");
+
+        prices.forEach(price => {
+            let base = price.getAttribute("data-price");
+            let newPrice = base * rates[currentCurrency];
+
+            price.innerText = symbols[currentCurrency] + " " + newPrice.toFixed(2);
+        });
+    }
+</script>
+
+<!-- Bootstrap CSS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+
+</html>
