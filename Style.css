@@ -1,5 +1,6 @@
-/* NAVBAR */
+/* HOME PAGE CSS */
 
+/* NAVBAR */
 /* RESET */
 * {
     margin: 0;
@@ -147,8 +148,6 @@ header {
 /* NAVBAR */
 
 
-
-
 /* SECONDARY NAVBAR */
 
 /* NAVBAR */
@@ -242,8 +241,6 @@ header {
 }
 
 
-
-
 /* ===== RESPONSIVE ===== */
 
 /* TABLET */
@@ -307,7 +304,6 @@ header {
 }
 
 /* SECONDARY NAVBAR */
-
 
 
 
@@ -486,7 +482,6 @@ footer {
 }
 
 /* Footer CSS */
-
 
 
 
@@ -727,8 +722,6 @@ main {
 
 
 
-
-
 /*  Deals and offers section css */
 /* MAIN */
 .deals {
@@ -856,7 +849,6 @@ main {
 /*  Deals and offers section css */
 
 
-
 /* HOME OUTDOOR */
 .home-outdoor {
     display: grid;
@@ -941,7 +933,7 @@ main {
 .category-section {
     display: flex;
     gap: 20px;
-    margin: 40px ;
+    margin: 40px;
     margin-top: 10px;
 }
 
@@ -954,7 +946,7 @@ main {
     background: #f5f5f5;
 }
 
-.category-img{
+.category-img {
     width: 235px;
     margin-left: -10px;
     height: 225px;
@@ -1017,3 +1009,345 @@ main {
 }
 
 /* <!-- Consumer and electronic gadget --> */
+
+
+/* <!-- request to supplier portion --> */
+.request-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 40px;
+    margin-top: -20px;
+
+    /* gradient bg (figma jaisa) */
+    background: linear-gradient(90deg, #2b6cb0, #2dd4bf);
+    color: white;
+}
+
+/* LEFT TEXT */
+.request-text {
+    max-width: 50%;
+}
+
+.request-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.request-text p {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* RIGHT FORM BOX */
+.request-form {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.request-form h3 {
+    margin-bottom: 10px;
+}
+
+.request-form input,
+.request-form textarea,
+.request-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.request-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* hover */
+.request-form button:hover {
+    background: #1e40af;
+}
+
+/* <!-- request to supplier portion --> */
+
+
+
+/* <!-- Recommended items --> */
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 40px;
+}
+
+/* GRID LAYOUT */
+.recommended-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* desktop 5 items */
+    gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* CARD */
+.item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* IMAGE */
+.item img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* PRICE */
+.item .price {
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* DESCRIPTION */
+.item .desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* HOVER EFFECT 🔥 */
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* RESPONSIVE 📱 */
+@media (max-width: 1024px) {
+    .recommended-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .recommended-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* <!-- Recommended items --> */
+
+
+/* <!-- Extra services portion --> */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.img-box {
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ICON STYLE */
+.icon {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+    background: white;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT 🔥 */
+.service-card:hover .icon {
+    transform: scale(1.1);
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.service-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.service-card p {
+    padding: 12px;
+    font-size: 14px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* <!-- Extra services portion --> */
+
+
+/* <!-- Suppliers by region --> */
+
+/* SUPPLIERS */
+.suppliers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-left: 40px;
+}
+
+.supplier {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.supplier img {
+    width: 24px;
+    height: 16px;
+}
+
+.supplier p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.supplier span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* <!-- Suppliers by region --> */
+
+
+
+/* NEWSLETTER */
+.newsletter {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+.newsletter h3 {
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: gray;
+    font-size: 14px;
+}
+
+.newsletter-box {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-box input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.newsletter-box button {
+    padding: 10px 20px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.newsletter-box button:hover {
+    background: #0b5ed7;
+}
+
+/* NEWSLETTER */
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .suppliers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .suppliers {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+    }
+}
+/* HOME PAGE CSS */
