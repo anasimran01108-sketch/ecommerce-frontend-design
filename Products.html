@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Font Awesome link -->
 
     <title>Products</title>
 </head>
@@ -158,7 +157,6 @@
 
         </aside>
 
-
         <!-- RIGHT SIDE -->
         <main class="products">
 
@@ -180,53 +178,63 @@
 
                 <!-- CARD -->
                 <div class="card">
-                    <img src="Asset/Image/cameras in category sec">
-                    <h4>Canon Camera EOS 2000</h4>
-                    <p class="price">$998.00</p>
-                    <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
-                    <p class="ship">Free Shipping</p>
-                    <p class="desc">Very good quality camera</p>
-                    <a href="#" class="view">View details</a>
+                    <img src="Asset/Image/cameras in category sec" alt="">
+                    <div>
+                        <h4>Canon Camera EOS 2000</h4>
+                        <p class="price">$998.00</p>
+                        <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
+                        <p class="ship">Free Shipping</p>
+                        <p class="desc">Very good quality camera</p>
+                        <a href="#" class="view">View details</a>
+                    </div>
                 </div>
-                <br>
+
                 <div class="card">
-                    <img src="Asset/Image/go pro camera in deal">
-                    <h4>GoPro HERO6 Camera</h4>
-                    <p class="price">$998.00</p>
-                    <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
-                    <p class="ship">Free Shipping</p>
-                    <p class="desc">Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="view">View details</a>
+                    <img src="Asset/Image/go pro camera in deal" alt="">
+                    <div>
+                        <h4>GoPro HERO6 Camera</h4>
+                        <p class="price">$998.00</p>
+                        <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
+                        <p class="ship">Free Shipping</p>
+                        <p class="desc">Excellent camera quality especially taking pictures at night</p>
+                        <a href="#" class="view">View details</a>
+                    </div>
                 </div>
-                <br>
+
                 <div class="card">
-                    <img src="Asset/Image/canon phone in deal">
-                    <h4>Smartphone X</h4>
-                    <p class="price">$998.00</p>
-                    <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
-                    <p class="ship">Free Shipping</p>
-                    <p class="desc">Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="view">View details</a>
+                    <img src="Asset/Image/canon phone in deal" alt="">
+                    <div>
+                        <h4>Smartphone X</h4>
+                        <p class="price">$998.00</p>
+                        <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
+                        <p class="ship">Free Shipping</p>
+                        <p class="desc">High-quality smartphone with best performance battery</p>
+                        <a href="#" class="view">View details</a>
+                    </div>
                 </div>
-                <br>
+
                 <div class="card">
-                    <img src="Asset/Image/Laptop in deal">
-                    <h4>Laptop Pro</h4>
-                    <p class="price">$998.00</p>
-                    <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
-                    <p class="ship">Free Shipping</p>
-                    <p class="desc">Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="view">View details</a>
+                    <img src="Asset/Image/Laptop in deal" alt="">
+                    <div>
+                        <h4>Laptop Pro</h4>
+                        <p class="price">$998.00</p>
+                        <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
+                        <p class="ship">Free Shipping</p>
+                        <p class="desc">Very nice laptop also convertable like macbook or tablet</p>
+                        <a href="#" class="view">View details</a>
+                    </div>
                 </div>
-                <br>
+
                 <div class="card">
-                    <img src="Asset/Image/Headset for gaming">
-                    <h4>Headphones</h4>
-                    <p class="price">$998.00</p>
-                    <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
-                    <p class="ship">Free Shipping</p>
-                    <p class="desc">Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="view">View details</a>
+                    <img src="Asset/Image/Headset for gaming" alt="">
+                    <div>
+                        <h4>Headphones</h4>
+                        <p class="price">$998.00</p>
+                        <p class="rating">⭐⭐⭐⭐☆ 7.5 • 154 orders</p>
+                        <p class="ship">Free Shipping</p>
+                        <p class="desc">best headphones with noise cancellation</p>
+                        <a href="#" class="view">View details</a>
+                    </div>
                 </div>
 
             </div>
@@ -340,11 +348,10 @@
 
     </footer>
     <!-- Footer -->
-
 </body>
+
 <script>
     // NEWSLETTER FORM
-
     document.getElementById("newsletterForm").addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -355,16 +362,12 @@
             return;
         }
 
-        // simple email check
         if (!email.includes("@")) {
             alert("Enter valid email");
             return;
         }
 
-        // SUCCESS
         alert("Subscribed successfully!");
-
-        // reset form
         this.reset();
     });
 
